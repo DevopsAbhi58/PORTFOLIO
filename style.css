@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  overflow-x: hidden;
+}
+header {
+  background-color: #161b22;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #58a6ff;
+  animation: slideDown 1.5s ease;
+}
+header p {
+  color: #8b949e;
+  margin-top: 0.5rem;
+  animation: fadeIn 2s ease-in;
+}
+nav {
+  margin-top: 1rem;
+}
+nav a {
+  color: #58a6ff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #1f6feb;
+}
+section {
+  padding: 3rem 2rem;
+  animation: fadeIn 2s ease forwards;
+}
+h2 {
+  font-size: 1.8rem;
+  color: #79c0ff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #58a6ff;
+  margin-top: 5px;
+  transition: width 0.5s;
+}
+h2:hover::after {
+  width: 80px;
+}
+ul li {
+  margin: 10px 0;
+}
+.project {
+  background-color: #161b22;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #58a6ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  transition: border 0.3s;
+}
+form input:focus, form textarea:focus {
+  border-color: #58a6ff;
+  outline: none;
+}
+form button {
+  padding: 0.8rem 1.5rem;
+  background: #238636;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #2ea043;
+}
+footer {
+  background: #161b22;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
